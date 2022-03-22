@@ -1,0 +1,89 @@
+.navbar {
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	// background-color: var(--main-color);
+	// background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+	background: #13131320;
+	// opacity: 0.2;
+	z-index: 999;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	transition: all 0.3s ease-in;
+
+	&.scrolled {
+		background-color: var(--main-color);
+		transition: all 0.3s ease-in;
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 50px;
+		height: 103px;
+
+		.left {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			img {
+				height: 40px;
+				margin-right: 2rem;
+			}
+			span {
+				margin-right: 1rem;
+				font-weight: bold;
+				cursor: pointer;
+			}
+		}
+
+		.right {
+			display: flex;
+			align-items: center;
+
+			.icon {
+				margin: 0px 15px;
+				cursor: pointer;
+				align-self: flex-end;
+			}
+
+			.avatar {
+				margin-right: 10px;
+				cursor: pointer;
+			}
+
+			.profile-container {
+				position: relative;
+				.dropdown-icon {
+					cursor: pointer;
+					position: absolute;
+				}
+				.options {
+					display: none;
+				}
+
+				span {
+					padding: 10px;
+					cursor: pointer;
+				}
+
+				&:hover {
+					.options {
+						display: flex;
+						flex-direction: column;
+						position: absolute;
+						top: 50px;
+						left: -50px;
+						background-color: var(--main-color);
+						border-radius: 12px;
+					}
+				}
+			}
+		}
+	}
+}
